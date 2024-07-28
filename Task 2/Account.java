@@ -8,40 +8,27 @@ public class Account {
     }
     public Account(double balance)
     {
+        if(balance>0)
+            this.balance=balance;
+        else
+            System.out.println("balance cannot be negative");
+            this.balance=0.0;
 
     }
-    public static void main(String[] args)
-    {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the account number");
-        System.out.println("Enter the Operation"+"\n"+"Enter 1 to deposit"+"\n"+"Enter 2 to withdraw"+"\n"+"Enter 3 to show balance");
-        String operation=sc.next();
-        int money;
-        Account obj=new Account();
-        switch(operation):
-        {
-                case 1:
-                    System.out.println("Enter the amount to deposit");
-                    money=sc.nextInt();
-        }
-
-
-
-    }
-    public void deposit(int amount)
+    public void deposit(double amount)
     {
         if (amount > 0) {
-            balance += amount;
+            this.balance += amount;
             System.out.println("Deposited: " + amount);
         } else {
             System.out.println("Error: Deposit amount must be positive.");
         }
     }
-    public void withdraw(int amount)
+    public void withdraw(double amount)
     {
         if(amount>0)
-            if (amount <= balance) {
-                balance -= amount;
+            if (amount <= this.balance) {
+                this.balance -= amount;
                 System.out.println("Withdrew: " + amount);
             } else {
                 System.out.println("Error: Insufficient funds.");
@@ -53,6 +40,32 @@ public class Account {
     }
     public void display()
     {
-        System.out.println("Balance:"+balance);
+        System.out.println("Balance:"+this.balance);
     }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        do {
+            System.out.println("Enter the Operation" + "\n" + "Enter 1 to deposit" + "\n" + "Enter 2 to withdraw" + "\n" + "Enter 3 to show balance");
+            int operation = sc.nextInt();
+            double money;
+            Account obj = new Account();
+            switch (operation) {
+                case 1:
+                    System.out.println("Enter the amount to deposit");
+                    money = sc.nextDouble();
+                    obj.deposit(money);
+                    break;
+                case 2:
+                    System.out.println("Enter the amount to withdraw");
+                    money = sc.nextDouble();
+                    obj.withdraw(money);
+                    break;
+                case 3:
+                    obj.display();
+            }
+            System.out.println("Enter Y do do other operation");
+        }while(sc.next().equals("Y"));
+    }
+
 }

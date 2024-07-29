@@ -4,7 +4,7 @@ public class Account {
     private double balance;
     public Account()
     {
-        this.balance=0.0;
+        this.balance=balance;
     }
     public Account(double balance)
     {
@@ -12,7 +12,6 @@ public class Account {
             this.balance=balance;
         else
             System.out.println("balance cannot be negative");
-            this.balance=0.0;
 
     }
     public void deposit(double amount)
@@ -45,11 +44,12 @@ public class Account {
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
+        Account obj = new Account();
         do {
             System.out.println("Enter the Operation" + "\n" + "Enter 1 to deposit" + "\n" + "Enter 2 to withdraw" + "\n" + "Enter 3 to show balance");
             int operation = sc.nextInt();
             double money;
-            Account obj = new Account();
+
             switch (operation) {
                 case 1:
                     System.out.println("Enter the amount to deposit");
@@ -63,6 +63,7 @@ public class Account {
                     break;
                 case 3:
                     obj.display();
+                    break;
             }
             System.out.println("Enter Y do do other operation");
         }while(sc.next().equals("Y"));

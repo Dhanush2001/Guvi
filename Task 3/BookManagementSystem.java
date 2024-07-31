@@ -122,12 +122,12 @@ public class BookManagementSystem
             int operation= sc.nextInt();
             switch(operation){
                 case 1:
-                    System.out.print("Enter Book ID: ");
+                    System.out.print("Enter Book ID:");
                     int bookID = sc.nextInt();
                     sc.nextLine();
-                    System.out.print("Enter Title: ");
+                    System.out.print("Enter Title:");
                     String title = sc.nextLine();
-                    System.out.print("Enter Author: ");
+                    System.out.print("Enter Author:");
                     String author = sc.nextLine();
                     sc.nextLine();
                     Book book = new Book(bookID, title, author,true);
@@ -135,7 +135,7 @@ public class BookManagementSystem
                     System.out.println("Book added.");
                     break;
                 case 2:
-                    System.out.print("Enter Book ID to Remove: ");
+                    System.out.print("Enter Book ID to Remove:");
                     int removeID = sc.nextInt();
                     if (library.removeBook(removeID)) {
                         System.out.println("Book removed.");
@@ -144,14 +144,14 @@ public class BookManagementSystem
                     }
                     break;
                 case 3:
-                    System.out.print("Enter Book ID to Replace: ");
+                    System.out.print("Enter Book ID to Replace:");
                     int replaceID = sc.nextInt();
                     sc.nextLine();
-                    System.out.print("Enter New Book Title: ");
+                    System.out.print("Enter New Book Title:");
                     String newTitle = sc.nextLine();
-                    System.out.print("Enter New Book Author: ");
+                    System.out.print("Enter New Book Author:");
                     String newAuthor = sc.nextLine();
-                    System.out.print("Is New Book Available (true/false): ");
+                    System.out.print("Is New Book Available:");
                     boolean newAvailable = sc.nextBoolean();
                     sc.nextLine();
                     Book newBook = new Book(replaceID, newTitle, newAuthor, newAvailable);
@@ -162,11 +162,11 @@ public class BookManagementSystem
                     }
                     break;
                 case 4:
-                    System.out.print("Enter Book ID to Search: ");
+                    System.out.print("Enter Book ID to Search:");
                     int searchID = sc.nextInt();
                     Book foundBook = library.searchBookByID(searchID);
                     if (foundBook != null) {
-                        System.out.println("Book found: " + foundBook);
+                        System.out.println("Book found:" + foundBook);
                     } else {
                         System.out.println("Book not found.");
                     }
@@ -176,7 +176,7 @@ public class BookManagementSystem
                     library.diplayBooks();
                     break;
                 case 6:
-                    System.out.println("Exiting...");
+                    System.out.println("Exiting");
                     sc.close();
                     return;
                 default:

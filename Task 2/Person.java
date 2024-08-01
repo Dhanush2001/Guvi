@@ -26,15 +26,15 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person obj=new Person();
+        Person person=new Person();
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter Name:");
-        obj.name=sc.next();
+        person.name=sc.next();
         System.out.println("Enter Age:");
-        obj.age=sc.nextInt();
-        obj.display();
-        Person obj1 =new Person("Hugh",30);
-        obj1.display();
+        person.age=sc.nextInt();
+        person.display();
+        Person person1 =new Person("Hugh",30);
+        person1.display();
     }
     public void display()
     {

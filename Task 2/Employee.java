@@ -67,8 +67,8 @@ public class Employee extends Person1{
         String empid=sc.next();
         System.out.println("Enter Salary:");
         double salary=sc.nextDouble();
-        Employee obj=new Employee(name,age,empid,salary);
-        obj.displayPerson();
+        Employee employee=new Employee(name,age,empid,salary);
+        employee.displayPerson();
     }
 
 }

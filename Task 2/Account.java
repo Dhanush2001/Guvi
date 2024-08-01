@@ -44,7 +44,7 @@ public class Account {
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
-        Account obj = new Account();
+        Account account = new Account();
         do {
             System.out.println("Enter the Operation" + "\n" + "Enter 1 to deposit" + "\n" + "Enter 2 to withdraw" + "\n" + "Enter 3 to show balance");
             int operation = sc.nextInt();
@@ -54,15 +54,15 @@ public class Account {
                 case 1:
                     System.out.println("Enter the amount to deposit");
                     money = sc.nextDouble();
-                    obj.deposit(money);
+                    account.deposit(money);
                     break;
                 case 2:
                     System.out.println("Enter the amount to withdraw");
                     money = sc.nextDouble();
-                    obj.withdraw(money);
+                    account.withdraw(money);
                     break;
                 case 3:
-                    obj.display();
+                    account.display();
                     break;
             }
             System.out.println("Enter Y do do other operation");

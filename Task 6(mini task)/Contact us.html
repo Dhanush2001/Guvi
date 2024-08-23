@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-color: #f4f4f4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                
+            }
+            .contact {
+                background-color: #f5e0fa;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0,1);
+                width: 50vh;
+            }
+            .contact h2 {
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            .contact .group {
+                margin-bottom: 20px;
+            }
+            .contact-form label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .contact input,
+            .contact textarea {
+                width: 100%;
+                padding: 10px;
+                border: 0.5px solid #ccc;
+                border-radius: 5px;
+                margin-left: -10px;
+                font-size: 16px;
+            }
+            .contact textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+            .contact button {
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #45a049;
+                color: white;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            .contact button:hover {
+                background-color: #74f674;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="contact">
+            <h2>Contact Us</h2>
+            
+            <div class="group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+    
+            <div class="group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+    
+            <div class="group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+        </form>
+    </body>
+    
+</html>    

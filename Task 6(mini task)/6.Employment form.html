@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Type Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:50vh;
+            margin: 0;
+        }
+        .contact {
+                background-color: #a3e2e8;
+                padding: 20px;
+                border-radius: 8px;
+                width: 50vh;
+                margin-top:2px;
+            }
+        .contact .group {
+            margin-bottom: 15px;
+        }
+        .contact button {
+ 
+                border: none;
+                border-radius: 5px;
+                background-color:#e4b990;
+                color: white;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        .contact label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+    <form class="contact">
+        <h1>Employee Type Form</h1>
+        <div class="group">
+            <label for="fname" >First Name:</label>
+            <input type="text" id="fname" name="fname">
+            <label for="lname" >Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            <label for="Number" >Number:</label>
+            <input type="tel" id="Number" name="num">
+            <label>Employee Type:</label>
+            <input type="radio" id="salaried" name="employeeType" value="salaried">
+            <label for="salaried">Salaried</label>
+            <input type="radio" id="ownBusiness" name="employeeType" value="ownBusiness">
+            <label for="ownBusiness">Own Business</label>
+        </div>
+        <div class="group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>

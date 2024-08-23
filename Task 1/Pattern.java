@@ -10,11 +10,11 @@ public class Pattern {
         {
             for(int j=number;j>number-i;j--)
             {
-                System.out.print(j);
+                System.out.printf("%d ",j);
             }
             for(int j=1;j<=number-i;j++)
             {
-                System.out.print(number-i+1);
+                System.out.printf("%d ",number-i+1);
             }
 
             System.out.println();

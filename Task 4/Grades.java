@@ -48,7 +48,7 @@ public class Grades {
                     break;
                 case 2:
                     System.out.println("Enter Student name to remove the record");
-                    String removeName = scanner.nextLine();
+                    String removeName = scanner.next();
                     grades.removeStudent(removeName);
                     break;
                 case 3:

@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Elements with Default Values</title>
+    </head>
+    <body>
+        <form>
+            <!--text input-->
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" value="Richard"><br>
+            <!--email input-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="richard123@gamil.com"><br> 
+            <!--password input-->
+            <lable for="pass">Password:</lable>
+            <input id="pass" type="password" name="pass" value="*******"><br>
+            <!--number input-->
+            <lable for="num">Number:</lable>
+            <input id="number" type="number" name="number" value="9876543210"><br>
+            <!--Date input-->
+            <lable for="date">date and time of damage:</lable>
+            <input id="date" type="datetime-local" name="date" value="2023-09-18 17:10"><br>
+            <!-- Radio Button -->
+            <label>Warranty:</label>
+            <input type="radio" id="no" name="no" value="No" checked>
+            <label for="no">No</label>
+            <input type="radio" id="yes" name="Yes" value="Yes">
+            <label for="yes">Yes</label><br>
+            <!-- Select Dropdown -->
+
+            <label for="Type of Damage">Damage Type:</label>
+            <select id="Type of Damage" name="Damage">
+            <option value="Body" selected>Body</option>
+            <option value="motor">motor</option>
+            <option value="other parts">other parts</option>
+            </select><br>
+            <!-- Textarea -->
+            <label for="info">Extra information regarding damage:</label><br>
+            <textarea id="info" name="info" rows="4" cols="50">Basic Damage.</textarea><br>
+            <!-- File Input -->
+            <label for="file">Damaged product image:</label>
+            <input type="file" id="file" name="file"><br>
+            <!-- Color Picker -->
+            <label for="color">Selected Color of Product:</label>
+            <input type="color" id="color" name="color" value="#ff0000"><br>
+            <!-- Range Input -->
+            <label for="range">Damage Range:</label>
+            <input type="range" id="range" name="range" min="0" max="10" value="5"><br>
+            <!-- Checkbox -->
+            <label for="check">Acknowledgment:</label>
+            <input type="checkbox" id="check" name="check" checked><br><br>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

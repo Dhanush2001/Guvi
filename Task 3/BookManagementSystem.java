@@ -12,6 +12,7 @@ class Book {
         this.author=author;
         this.isAvailable=isAvailable;
     }
+    //getter and setter methods for getting the values as well as setting the values for a certain object
     public void setBookID(int bookID)
     {
         this.bookID=bookID;
@@ -44,6 +45,7 @@ class Book {
     {
         return isAvailable;
     }
+    //this method is used to convert the object into string  it overrides the to string method
     public String toString() {
         return "Book ID: " + bookID + ", Title: " + title + ", Author: " + author + ", Available: " + isAvailable;
     }
@@ -55,7 +57,7 @@ class Library
     public Library() {
         this.books = new Book[5];
     }
-
+    // this method is used to add book into the stack
     public void addBook(Book book)
     {
         if(count<books.length && count<=5)
@@ -66,6 +68,7 @@ class Library
             System.out.println("Library is full!");
         }
     }
+    // this method is used to remove book using bookID
     public boolean removeBook(int bookID) {
         for (int i = 0; i < count; i++) {
             if (books[i].getBookID() == bookID) {
@@ -78,7 +81,7 @@ class Library
         }
         return false;
     }
-
+    // this method is used to replace book using bookID
     public boolean replaceBook(int bookID, Book newBook) {
     for (int i = 0; i < count; i++) {
         if (books[i].getBookID() == bookID) {
@@ -88,6 +91,7 @@ class Library
     }
     return false;
     }
+    // this method is used to search book using bookID
     public Book searchBookByID(int bookID) {
         for (int i = 0; i < count; i++) {
             if (books[i].getBookID() == bookID) {
@@ -96,6 +100,7 @@ class Library
         }
         return null;
     }
+    // this method is used to display all the books
     public void diplayBooks()
     {
         if(count==0)

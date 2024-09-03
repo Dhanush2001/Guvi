@@ -1,0 +1,78 @@
+.outer{
+    background-color:white;
+    margin: 0px 250px 250px 250px;
+    border: 1px black;
+    page-break-after:always;
+}
+.header
+{
+    padding: 20px;
+    color:black;
+    background-color: rgba(44, 43, 43, 0.921);
+
+}
+#imgBorder{
+    left: 36%;
+    text-align: center;
+}
+.profile-picture{
+    height: 200px;
+    width: 200px;
+    border: 3px solid rgb(2, 2, 1);
+    border-radius: 50%;
+}
+.name
+{
+    font-size:60px;
+    text-align: center;
+    border-radius:5px;
+    margin:-35px 235px 0px 235px;
+    width: fit-content;
+    background-color: rgb(250, 190, 40);
+    position: relative;
+    
+}
+.contact
+{
+    padding: 1px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.nothing
+{
+    margin-top: 210px;
+    width:957px;
+    background-color: rgb(241, 237, 237);
+    padding: 20px;
+    position: absolute;
+}
+.left
+{
+    margin-left: 30px;
+    margin-top: 45px;   
+    background-color: white;
+    grid-column: 1;
+    border-right: 1px solid black;
+}
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    color: #7c7878;
+    font-size: 35px;
+    
+}
+.right
+{
+    margin-left:30px ;
+    background-color: white;
+    grid-column: 2;
+    margin-right: 30px;
+}
+.below
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+}

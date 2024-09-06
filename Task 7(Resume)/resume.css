@@ -1,78 +1,139 @@
-.outer{
-    background-color:white;
-    margin: 0px 250px 250px 250px;
-    border: 1px black;
-    page-break-after:always;
-}
-.header
-{
+.outer {
+    background-color: white;
+    margin: 0 auto;
     padding: 20px;
-    color:black;
-    background-color: rgba(44, 43, 43, 0.921);
-
+    max-width: 70%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    page-break-after: always;
 }
-#imgBorder{
-    left: 36%;
+
+.header {
+    padding: 20px;
+    color: black;
+    background-color: rgba(44, 43, 43, 0.921);
+}
+
+#imgBorder {
     text-align: center;
 }
-.profile-picture{
+
+.profile-picture {
     height: 200px;
     width: 200px;
     border: 3px solid rgb(2, 2, 1);
     border-radius: 50%;
+
 }
-.name
-{
-    font-size:60px;
+
+.name {
+    font-size: 4vw;
     text-align: center;
-    border-radius:5px;
-    margin:-35px 235px 0px 235px;
-    width: fit-content;
+    border-radius: 5px;
     background-color: rgb(250, 190, 40);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
     position: relative;
-    
 }
-.contact
-{
-    padding: 1px;
+
+.contact {
+    padding: 10px;
     border-bottom: 1px solid black;
     text-align: center;
 }
-
-.nothing
-{
-    margin-top: 210px;
-    width:957px;
-    background-color: rgb(241, 237, 237);
+.left {
+    margin: 45px 0;
     padding: 20px;
-    position: absolute;
-}
-.left
-{
-    margin-left: 30px;
-    margin-top: 45px;   
     background-color: white;
-    grid-column: 1;
     border-right: 1px solid black;
 }
-h2{
+
+h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
     color: #7c7878;
-    font-size: 35px;
-    
+    font-size: 2.5vw;
 }
-.right
-{
-    margin-left:30px ;
+
+.right {
+    margin: 45px 0;
+    padding: 20px;
     background-color: white;
-    grid-column: 2;
-    margin-right: 30px;
 }
-.below
-{
-    display:grid;
+
+.below {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
+    margin: 20px 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .outer {
+        margin: 0 50px;
+    }
+    
+    .name {
+        font-size: 3vw;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    .below {
+        grid-template-columns: 1fr;
+    }
+
+    .left, .right {
+        margin: 20px 0;
+        border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .outer {
+        margin: 0 20px;
+    }
+
+    .profile-picture {
+        height: 150px;
+        width: 150px;
+    }
+
+    .name {
+        font-size:4vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .left, .right {
+        margin: 10px 0;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .outer {
+        margin: 0 10px;
+    }
+
+    .profile-picture {
+        height: 120px;
+        width: 120px;
+    }
+
+    .name {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
 }

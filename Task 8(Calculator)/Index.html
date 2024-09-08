@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-calculator</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 style="color:#fff" id="title">Dom-Calculator</h1>
+    <p style="color:#fff"id="description">The Calculator performs basic operations and remainder divison</p>
+    <input type="text" id="result" readonly>
+    <div class="row">
+        <button class="col btn btn-dark" id="clear" onclick="clearDisplay()">C</button>
+        <button class="col btn btn-dark" id="delete"onclick="deleteLast()"><-</button>
+        <button class="col btn btn-dark" id="modulus"onclick="appendToDisplay('%')">/R</button>
+        <button class="col btn btn-dark" id="division" onclick="appendToDisplay('/')">/</button>
+    </div>
+    <div class="row">
+        <button class="col btn btn-secondary" id="7" onclick="appendToDisplay('7')">7</button>
+        <button class="col btn btn-secondary" id="8" onclick="appendToDisplay('8')">8</button>
+        <button class="col btn btn-secondary" id="9"onclick="appendToDisplay('9')">9</button>
+        <button class="col btn btn-dark" id="multiply" onclick="appendToDisplay('*')">*</button>
+    </div>
+    <div class="row">
+        <button class="col btn btn-secondary" id="4" onclick="appendToDisplay('4')">4</button>
+        <button class="col btn btn-secondary" id="5" onclick="appendToDisplay('5')">5</button>
+        <button class="col btn btn-secondary" id="6" onclick="appendToDisplay('6')">6</button>
+        <button class="col btn btn-dark"  id="subtract" onclick="appendToDisplay('-')">-</button>
+    </div>
+    <div class="row">
+        <button class="col btn btn-secondary" id="1" onclick="appendToDisplay('1')">1</button>
+        <button class="col btn btn-secondary" id="2" onclick="appendToDisplay('2')">2</button>
+        <button class="col btn btn-secondary" id="3" onclick="appendToDisplay('3')">3</button>
+        <button class="col btn btn-dark" id="add" onclick="appendToDisplay('+')">+</button>
+    </div>
+    <div class="row">
+        <button class="col btn btn-secondary" id="0" onclick="appendToDisplay('0')">0</button>
+        <button class="col btn btn-secondary" id="dot" onclick="appendToDisplay('.')">.</button>
+        <button class="col btn btn-success" id="equal" onclick="calculate()">=</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
